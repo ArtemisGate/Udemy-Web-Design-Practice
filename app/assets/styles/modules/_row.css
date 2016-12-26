@@ -3,9 +3,19 @@
 
   @mixin clearfix;
 
+  &--t-padding
+  {
+    padding-top: 80px;
+  }
+
   &--gutters
   {
     margin-right: -65px;
+  }
+
+  &--guteers-small
+  {
+      margin-right: -45px;
   }
 
   &--gutters-large
@@ -23,7 +33,15 @@
   {
     padding-right: 100px;
 
+
   }
+
+  &--gutters-small > div
+  {
+    padding-right: 45px;
+
+  }
+
 
 
 
@@ -73,5 +91,22 @@
 
 
 
+  }
+
+
+  /*Begin Equal height rule*/
+
+  &--equal-height-at-medium
+  {
+    @mixin atMedium
+    {
+      display: flex;
+    }
+
+    & > div
+    {
+      float: none;
+      display: flex;
+    }
   }
 }
